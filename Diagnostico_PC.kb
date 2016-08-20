@@ -1,0 +1,148 @@
+REM Diagnóstico de PC - Memoria, Procesador y Placa Madre
+REM http://www.fonerbooks.com/cpu_ram.htm
+
+RULE [power supply failure]
+If [live screen?] = false and
+[power diagnostic done?] = false
+Then [diagnostico] = "Fuente defectuosa."
+
+RULE [video failure]
+If [live screen?] = false and
+[power diagnostic done?] = true and
+[video diagnostic done?] = false
+Then [diagnostico] = "Revisar el monitor o la salida de video."
+
+RULE [undo upgrade]
+If [live screen?] = false and
+[power diagnostic done?] = true and
+[video diagnostic done?] = true and
+[new build?] = true
+Then [diagnostico] = "Revertir actualización reciente. Revisar la compatibilidad del procesador, la memoria o los componentes agregados y la placa madre."
+
+RULE [reseat ram]
+If [live screen?] = false and
+[power diagnostic done?] = true and
+[video diagnostic done?] = true and
+[new build?] = false and
+[ram reseated?] = false
+Then [diagnostico] = "Revisar instalación de la memoria. Si se poseen múltiples memorias, quitarlas y probarlas individualmente."
+
+RULE [reseat cpu]
+If [live screen?] = false and
+[power diagnostic done?] = true and
+[video diagnostic done?] = true and
+[new build?] = false and
+[ram reseated?] = true and
+[cpu seated flat?] = false
+Then [diagnostico] = "Revisar instalación del procesador al igual que el ventilador del procesador."
+
+RULE [bios_1]
+If [live screen?] = false and
+[power diagnostic done?] = true and
+[video diagnostic done?] = true and
+[new build?] = false and
+[ram reseated?] = true and
+[cpu seated flat?] = true
+Then [hipotesis] = "BIOS"
+
+RULE [motherboard failure]
+If [live screen?] = true and
+[freezes on boot?] = false
+Then [diagnostico] = "Placa madre defectuosa."
+
+RULE [restore one at a time]
+If [live screen?] = true and
+[freezes on boot?] = true and
+[freezes bare bones?] = false
+Then [diagnostico] = "Restaurar un componente a la vez hasta encontrar el componente problemático."
+
+RULE [bios_2]
+If [live screen?] = true and
+[freezes on boot?] = true and
+[freezes bare bones?] = true
+Then [hipotesis] = "BIOS"
+
+RULE [remove battery]
+If [hipotesis] = "BIOS" and
+[bios settings change] = true
+Then [diagnostico] = "Quitar la bateria de la placa madre y esperar una hora antes de volver a intentar."
+
+RULE [check heatsink power]
+If [hipotesis] = "BIOS" and
+[bios settings change] = false and
+[fan heatsink active?] = false
+Then [diagnostico] = "Revisar los conexiones del ventilador del procesador."
+
+RULE [swap ram]
+If [hipotesis] = "BIOS" and
+[bios settings change] = false and
+[fan heatsink active?] = true and
+[more than one beep?] = true
+Then [diagnostico] = "Revisar las conexiones de la memoria y la placa de video. Intercambiarlas por otras que funcionen."
+
+RULE [short case]
+If [hipotesis] = "BIOS" and
+[bios settings change] = false and
+[fan heatsink active?] = true and
+[more than one beep?] = false and
+[runs on bench?] = true
+Then [diagnostico] = "Existe un cortocircuito con el gabinete."
+
+RULE [bad cpu]
+If [hipotesis] = "BIOS" and
+[bios settings change] = false and
+[fan heatsink active?] = true and
+[more than one beep?] = false and
+[runs on bench?] = false and
+[cpu swap work?] = true
+Then [diagnostico] = "El procesador se rompio, reemplazar y revisar temperatura y tensión una vez reemplazado."
+
+RULE [swap ram]
+If [hipotesis] = "BIOS" and
+[bios settings change] = false and
+[fan heatsink active?] = true and
+[more than one beep?] = false and
+[runs on bench?] = false and
+[cpu swap work?] = false
+Then [diagnostico] = "Existe un problema con la placa madre o con la fuente de alimentación."
+
+GOAL [diagnostico]
+
+PROMPT [live screen?] YesNo
+"La computadora enciende y muestra al menos un mensaje en la pantalla (BIOS o del sistema operativo)?"
+
+PROMPT [power diagnostic done?] YesNo
+"La computadora enciende? Se escucha algún ruido (bips, ventiladores o discos)?"
+
+PROMPT [video diagnostic done?] YesNo
+"Se ha revisado que el monitor o la salida de video funcionen?"
+
+PROMPT [new build?] YesNo
+"Es una computadora recién armada o se ha actualizado algún componente?"
+
+PROMPT [ram reseated?] YesNo
+"Está la memoria RAM bien colocada?"
+
+PROMPT [cpu seated flat?] YesNo
+"Está el CPU bien colocado?"
+
+PROMPT [freezes on boot?] YesNo
+"La computadora se cuelga al iniciar el sistema operativo?"
+
+PROMPT [freezes bare bones?] YesNo
+"La computadora se cuelga al iniciar habiendo desconectado todos los componentes no escenciales?"
+
+PROMPT [bios settings change] YesNo
+"Se ha actualizado o cambiado algún valor en el BIOS?"
+
+PROMPT [fan heatsink active?] YesNo
+"El ventilador del procesador se mueve cuando la computadora se inicia?"
+
+PROMPT [more than one beep?] YesNo
+"Se escucha más de un bip cuando la computadora se inicia?"
+
+PROMPT [runs on bench?] YesNo
+"La computadora funciona sin el gabinete?"
+
+PROMPT [cpu swap work?] YesNo
+"La computadora funciona si se cambia el procesador por otro que funcione?"

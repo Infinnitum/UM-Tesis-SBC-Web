@@ -1,0 +1,527 @@
+REM Donde Vacacionar
+
+
+RULE [Nacional_Hacer deportes_Verano_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Verano"
+Then [Destino] = "San Martín de los Andes"
+
+RULE [Nacional_Hacer deportes_Invierno_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Invierno"
+Then [Destino] = "Bariloche"
+
+RULE [Nacional_Hacer deportes_Entre temporadas_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Tandil"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Verano_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Verano"
+Then [Destino] = "Cataratas del Iguazú"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Invierno_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Invierno"
+Then [Destino] = "Bariloche"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Entre temporadas_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Entre Rios"
+
+RULE [Nacional_Visitar monumentos historicos_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Visitar monumentos historicos"
+Then [Destino] = "Ciudad de Buenos Aires"
+
+RULE [Nacional_Descansar_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Descansar"
+Then [Destino] = "Termas Entre Rios"
+
+RULE [Internacional_Hacer deportes_Verano_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Verano"
+Then [Destino] = "Tailandia"
+
+RULE [Internacional_Hacer deportes_Invierno_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Invierno"
+Then [Destino] = "Alpes Suizos"
+
+RULE [Internacional_Hacer deportes_Entre temporadas_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Nueva Zelanda"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Verano_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Verano"
+Then [Destino] = "Bahia, Brasil"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Invierno_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Invierno"
+Then [Destino] = "Noruega"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Entre temporadas_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Praga"
+
+RULE [Internacional_Visitar monumentos historicos_Verano_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Verano"
+Then [Destino] = "Machu Picchu"
+
+RULE [Internacional_Visitar monumentos historicos_Invierno_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Invierno"
+Then [Destino] = "Madrid"
+
+RULE [Internacional_Visitar monumentos historicos_Entre temporadas_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Edimburgo"
+
+RULE [Internacional_Descansar_Solo]
+If [Ambito Social] = "Solo" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Descansar"
+Then [Destino] = "Mediterraneo"
+
+RULE [Nacional_Hacer deportes_Verano_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Verano"
+Then [Destino] = "Mar del Plata"
+
+RULE [Nacional_Hacer deportes_Invierno_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Invierno"
+Then [Destino] = "Bariloche"
+
+RULE [Nacional_Hacer deportes_Entre temporadas_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Tandil"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Verano_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Verano"
+Then [Destino] = "Cataratas del Iguazú"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Invierno_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Invierno"
+Then [Destino] = "Ushuaia"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Entre temporadas_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Glaciar Perito Moreno"
+
+RULE [Nacional_Visitar monumentos historicos_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Visitar monumentos historicos"
+Then [Destino] = "Ciudad de Buenos Aires"
+
+RULE [Nacional_Descansar_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Descansar"
+Then [Destino] = "Termas Entre Rios"
+
+RULE [Internacional_Hacer deportes_Verano_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Verano"
+Then [Destino] = "Tailandia"
+
+RULE [Internacional_Hacer deportes_Invierno_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Invierno"
+Then [Destino] = "Alpes Suizos"
+
+RULE [Internacional_Hacer deportes_Entre temporadas_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Nueva Zelanda"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Verano_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Verano"
+Then [Destino] = "Caribe"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Invierno_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Invierno"
+Then [Destino] = "Marruecos"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Entre temporadas_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Sudáfrica"
+
+RULE [Internacional_Visitar monumentos historicos_Verano_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Verano"
+Then [Destino] = "Italia"
+
+RULE [Internacional_Visitar monumentos historicos_Invierno_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Invierno"
+Then [Destino] = "Tokio"
+
+RULE [Internacional_Visitar monumentos historicos_Entre temporadas_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Paris"
+
+RULE [Internacional_Descansar_En pareja]
+If [Ambito Social] = "En pareja" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Descansar"
+Then [Destino] = "Crucero"
+
+RULE [Nacional_Hacer deportes_Verano_Familia con niños]
+If [Ambito Social] = "Familia con niños and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Verano"
+Then [Destino] = "Mar del Plata"
+
+RULE [Nacional_Hacer deportes_Invierno_Familia con niños]
+If [Ambito Social] = "Familia con niños and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Invierno"
+Then [Destino] = "Bariloche"
+
+RULE [Nacional_Hacer deportes_Entre temporadas_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Tandil"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Verano_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Verano"
+Then [Destino] = "Cataratas del Iguazú"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Invierno_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Invierno"
+Then [Destino] = "Bariloche"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Entre temporadas_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Puerto Madryn"
+
+RULE [Nacional_Visitar monumentos historicos_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Visitar monumentos historicos"
+Then [Destino] = "Ciudad de Buenos Aires"
+
+RULE [Nacional_Descansar_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Descansar"
+Then [Destino] = "Termas Entre Rios"
+
+RULE [Internacional_Hacer deportes_Verano_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Verano"
+Then [Destino] = "Nueva Zelanda"
+
+RULE [Internacional_Hacer deportes_Invierno_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Invierno"
+Then [Destino] = "Alpes Suizos"
+
+RULE [Internacional_Hacer deportes_Entre temporadas_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Disney"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Verano_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Verano"
+Then [Destino] = "Nueva Zelanda"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Invierno_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Invierno"
+Then [Destino] = "Kenia"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Entre temporadas_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Cairo"
+
+RULE [Internacional_Visitar monumentos historicos_Verano_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Verano"
+Then [Destino] = "Mexico"
+
+RULE [Internacional_Visitar monumentos historicos_Invierno_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Invierno"
+Then [Destino] = "Madrid"
+
+RULE [Internacional_Visitar monumentos historicos_Entre temporadas_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Edimburgo"
+
+RULE [Internacional_Descansar_Familia con niños]
+If [Ambito Social] = "Familia con niños" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Descansar"
+Then [Destino] = "Crucero"
+
+RULE [Nacional_Hacer deportes_Verano_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Verano"
+Then [Destino] = "Mar del Plata"
+
+RULE [Nacional_Hacer deportes_Invierno_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Invierno"
+Then [Destino] = "Bariloche"
+
+RULE [Nacional_Hacer deportes_Entre temporadas_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Rosario"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Verano_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Verano"
+Then [Destino] = "Jujuy"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Invierno_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Invierno"
+Then [Destino] = "Bariloche"
+
+RULE [Nacional_Estar en contacto con la naturaleza_Entre temporadas_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Glaciar Perito Moreno"
+
+RULE [Nacional_Visitar monumentos historicos_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Visitar monumentos historicos"
+Then [Destino] = "Ciudad de Buenos Aires"
+
+RULE [Nacional_Descansar_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Nacional" and
+[Objetivo Principal] = "Descansar"
+Then [Destino] = "Rosario"
+
+RULE [Internacional_Hacer deportes_Verano_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Verano"
+Then [Destino] = "Australia"
+
+RULE [Internacional_Hacer deportes_Invierno_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Invierno"
+Then [Destino] = "Alpes Suizos"
+
+RULE [Internacional_Hacer deportes_Entre temporadas_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Hacer deportes" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Nueva Zelanda"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Verano_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Verano"
+Then [Destino] = "Atenas"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Invierno_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Invierno"
+Then [Destino] = "San Francisco"
+
+RULE [Internacional_Estar en contacto con la naturaleza_Entre temporadas_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Estar en contacto con la naturaleza" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Mexico"
+
+RULE [Internacional_Visitar monumentos historicos_Verano_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Verano"
+Then [Destino] = "Machu Picchu"
+
+RULE [Internacional_Visitar monumentos historicos_Invierno_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Invierno"
+Then [Destino] = "Madrid"
+
+RULE [Internacional_Visitar monumentos historicos_Entre temporadas_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Visitar monumentos historicos" and
+[Temporada] = "Entre temporadas"
+Then [Destino] = "Amsterdam"
+
+RULE [Internacional_Descansar_Grupo de amigos]
+If [Ambito Social] = "Grupo de amigos" and
+[Nacional o Internacional] = "Internacional" and
+[Objetivo Principal] = "Descansar"
+Then [Destino] = "Nueva York"
+
+
+
+GOAL [Destino]
+
+
+PROMPT [Ambito Social] MultChoice
+"Con quién se va a viajar?"
+"Solo"
+"En pareja"
+"Familia con niños"
+"Grupo de amigos"
+
+PROMPT [Nacional o Internacional] MultChoice
+"Prefiere un destino nacional o internacional?"
+"Nacional"
+"Internacional"
+
+PROMPT [Objetivo Principal] MultChoice
+"Cuál es el foco de su viaje?"
+"Hacer deportes"
+"Estar en contacto con la naturaleza"
+"Visitar monumentos historicos"
+"Descansar"
+
+PROMPT [Temporada] MultChoice
+"En qué momento del año prefiere viajar?"
+"Verano"
+"Invierno"
+"Entre temporadas"
+
+
+DEFAULT [Objetivo Principal] = "Descansar"

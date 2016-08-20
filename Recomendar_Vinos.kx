@@ -1,0 +1,12 @@
+<atributo>
+    <nombre>Ingrediente Carnes</nombre>
+    <url>http://192.168.1.50/tesis/data/ingrediente_carnes.html</url>
+</atributo>
+<atributo>
+    <nombre>Plato Principal</nombre>
+    <valor>Carnes</valor>
+</atributo>
+<atributo>
+    <nombre>Ámbito Social</nombre>
+    <valor>Reunión familiar</valor>
+</atributo>

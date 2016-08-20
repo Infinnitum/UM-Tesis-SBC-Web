@@ -1,0 +1,607 @@
+REM Recomendar Vinos
+REM http://winefolly.com/wp-content/uploads/2014/02/AF-Poster.png#fullscreen
+
+REM Carnes
+
+RULE [Carnes rojas]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Carnes rojas"
+Then [Tipo Vino] = "Rojo Intenso"
+
+RULE [Carnes curadas]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Carnes curadas"
+Then [Tipo Vino] = "Rojo Claro"
+
+RULE [Cerdos]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Cerdos"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Aves & Vino Tinto]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Aves" and
+[Preferencia Vino] = "Vino Tinto"
+Then [Tipo Vino] = "Rojo Claro"
+
+RULE [Aves & Vino Blanco]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Aves" and
+[Preferencia Vino] = "Vino Blanco"
+Then [Tipo Vino] = "Blanco Fuerte"
+
+RULE [Aves & Espumante]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Aves" and
+[Preferencia Vino] = "Espumante"
+Then [Tipo Vino] = "Espumante"
+
+RULE [Aves & Dulce]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Aves" and
+[Preferencia Vino] = "Dulce"
+Then [Tipo Vino] = "Espumante"
+
+RULE [Moluscos]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Moluscos"
+Then [Tipo Vino] = "Espumante"
+
+RULE [Peces]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Peces"
+Then [Tipo Vino] = "Blanco Suave"
+
+RULE [Langostas o mariscos]
+If [Plato Principal] = "Carnes" and
+[Ingrediente Carnes] = "Langostas o mariscos"
+Then [Tipo Vino] = "Blanco Fuerte"
+
+
+REM Otros
+
+RULE [Plancha o parrilla]
+If [Plato Principal] = "Otros" and
+[Ingrediente Otros] = "Plancha o parrilla"
+Then [Tipo Vino] = "Rojo Intenso"
+
+RULE [Salteado o frito]
+If [Plato Principal] = "Otros" and
+[Ingrediente Otros] = "Salteado o frito"
+Then [Tipo Vino] = "Rojo Claro"
+
+RULE [Ahumado]
+If [Plato Principal] = "Otros" and
+[Ingrediente Otros] = "Ahumado"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Horno]
+If [Plato Principal] = "Otros" and
+[Ingrediente Otros] = "Horno"
+Then [Tipo Vino] = "Rojo Intenso"
+
+RULE [Hervido]
+If [Plato Principal] = "Otros" and
+[Ingrediente Otros] = "Hervido"
+Then [Tipo Vino] = "Blanco Suave"
+
+
+REM Lácteos
+
+RULE [Quesos blandos o cremas & Vino Tinto]
+If [Plato Principal] = "Lácteos" and
+[Ingrediente Lácteos] = "Quesos blandos o cremas" and
+[Preferencia Vino] = "Vino Tinto"
+Then [Tipo Vino] = "Rojo Claro"
+
+RULE [Quesos blandos o cremas & Vino Blanco]
+If [Plato Principal] = "Lácteos" and
+[Ingrediente Lácteos] = "Quesos blandos o cremas" and
+[Preferencia Vino] = "Vino Blanco"
+Then [Tipo Vino] = "Blanco Fuerte"
+
+RULE [Quesos blandos o cremas & Espumante]
+If [Plato Principal] = "Lácteos" and
+[Ingrediente Lácteos] = "Quesos blandos o cremas" and
+[Preferencia Vino] = "Espumante"
+Then [Tipo Vino] = "Espumante"
+
+RULE [Quesos blandos o cremas & Dulce]
+If [Plato Principal] = "Lácteos" and
+[Ingrediente Lácteos] = "Quesos blandos o cremas" and
+[Preferencia Vino] = "Dulce"
+Then [Tipo Vino] = "Dulce"
+
+RULE [Quesos fuertes & Vino Tinto]
+If [Plato Principal] = "Lácteos" and
+[Ingrediente Lácteos] = "Quesos fuertes" and
+[Preferencia Vino] = "Vino Tinto"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Quesos fuertes & Vino Blanco]
+If [Plato Principal] = "Lácteos" and
+[Ingrediente Lácteos] = "Quesos fuertes" and
+[Preferencia Vino] = "Vino Blanco"
+Then [Tipo Vino] = "Blanco Suave"
+
+RULE [Quesos fuertes & Espumante]
+If [Plato Principal] = "Lácteos" and
+[Ingrediente Lácteos] = "Quesos fuertes" and
+[Preferencia Vino] = "Espumante"
+Then [Tipo Vino] = "Espumante"
+
+RULE [Quesos fuertes & Dulce]
+If [Plato Principal] = "Lácteos" and
+[Ingrediente Lácteos] = "Quesos fuertes" and
+[Preferencia Vino] = "Dulce"
+Then [Tipo Vino] = "Postre"
+
+RULE [Quesos duros]
+If [Plato Principal] = "Lácteos" and
+[Ingrediente Lácteos] = "Quesos duros"
+Then [Tipo Vino] = "Rojo Intenso"
+
+
+REM Vegetales
+
+RULE [Cebollas o ajos]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Cebollas o ajos"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Vegetales verdes]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Vegetales verdes"
+Then [Tipo Vino] = "Blanco Suave"
+
+RULE [Raices o calabazas]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Raices o calabazas"
+Then [Tipo Vino] = "Rosa"
+
+RULE [Tomates u otras frutas]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Tomates u otras frutas"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Hongos & Vino Tinto]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Hongos" and
+[Preferencia Vino] = "Vino Tinto"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Hongos & Vino Blanco]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Hongos" and
+[Preferencia Vino] = "Vino Blanco"
+Then [Tipo Vino] = "Blanco Fuerte"
+
+RULE [Hongos & Espumante]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Hongos" and
+[Preferencia Vino] = "Espumante"
+Then [Tipo Vino] = "Blanco Fuerte"
+
+RULE [Hongos & Dulce]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Hongos" and
+[Preferencia Vino] = "Dulce"
+Then [Tipo Vino] = "Blanco Fuerte"
+
+RULE [Nueces o semillas]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Nueces o semillas"
+Then [Tipo Vino] = "Dulce"
+
+RULE [Frijoles o arvejas]
+If [Plato Principal] = "Vegetales" and
+[Ingrediente Vegetales] = "Frijoles o arvejas"
+Then [Tipo Vino] = "Blanco Suave"
+
+
+REM Hierbas
+
+RULE [Pimienta negra]
+If [Plato Principal] = "Hierbas o especias" and
+[Ingrediente Hierbas] = "Pimienta negra"
+Then [Tipo Vino] = "Rojo Intenso"
+
+RULE [Pimientos o ajís]
+If [Plato Principal] = "Hierbas o especias" and
+[Ingrediente Hierbas] = "Pimientos o ajís"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Especias picantes]
+If [Plato Principal] = "Hierbas o especias" and
+[Ingrediente Hierbas] = "Especias picantes"
+Then [Tipo Vino] = "Dulce"
+
+RULE [Hierbas verdes]
+If [Plato Principal] = "Hierbas o especias" and
+[Ingrediente Hierbas] = "Hierbas verdes"
+Then [Tipo Vino] = "Blanco Suave"
+
+RULE [Especias dulces]
+If [Plato Principal] = "Hierbas o especias" and
+[Ingrediente Hierbas] = "Especias dulces"
+Then [Tipo Vino] = "Postre"
+
+RULE [Especias aromáticas o exóticas & Vino Tinto]
+If [Plato Principal] = "Hierbas o especias" and
+[Ingrediente Hierbas] = "Especias aromáticas o exóticas" and
+[Preferencia Vino] = "Vino Tinto"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Especias aromáticas o exóticas & Vino Blanco]
+If [Plato Principal] = "Hierbas o especias" and
+[Ingrediente Hierbas] = "Especias aromáticas o exóticas" and
+[Preferencia Vino] = "Vino Blanco"
+Then [Tipo Vino] = "Espumante"
+
+RULE [Especias aromáticas o exóticas & Espumante]
+If [Plato Principal] = "Hierbas o especias" and
+[Ingrediente Hierbas] = "Especias aromáticas o exóticas" and
+[Preferencia Vino] = "Espumante"
+Then [Tipo Vino] = "Espumante"
+
+RULE [Especias aromáticas o exóticas & Dulce]
+If [Plato Principal] = "Hierbas o especias" and
+[Ingrediente Hierbas] = "Especias aromáticas o exóticas" and
+[Preferencia Vino] = "Dulce"
+Then [Tipo Vino] = "Dulce"
+
+
+REM Almidón
+
+RULE [Almidón blanco & Vino Tinto]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Almidón blanco" and
+[Preferencia Vino] = "Vino Tinto"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Almidón blanco & Vino Blanco]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Almidón blanco" and
+[Preferencia Vino] = "Vino Blanco"
+Then [Tipo Vino] = "Blanco Suave"
+
+RULE [Almidón blanco & Espumante]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Almidón blanco" and
+[Preferencia Vino] = "Espumante"
+Then [Tipo Vino] = "Espumante"
+
+RULE [Almidón blanco & Dulce]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Almidón blanco" and
+[Preferencia Vino] = "Dulce"
+Then [Tipo Vino] = "Dulce"
+
+RULE [Granos integrales]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Granos integrales"
+Then [Tipo Vino] = "Dulce"
+
+RULE [Batatas o tubérculos]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Batatas o tubérculos"
+Then [Tipo Vino] = "Dulce"
+
+RULE [Papas & Vino Tinto]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Papas" and
+[Preferencia Vino] = "Vino Tinto"
+Then [Tipo Vino] = "Rojo Medio"
+
+RULE [Papas & Vino Blanco]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Papas" and
+[Preferencia Vino] = "Vino Blanco"
+Then [Tipo Vino] = "Blanco Suave"
+
+RULE [Papas & Espumante]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Papas" and
+[Preferencia Vino] = "Espumante"
+Then [Tipo Vino] = "Espumante"
+
+RULE [Papas & Dulce]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Papas" and
+[Preferencia Vino] = "Dulce"
+Then [Tipo Vino] = "Dulce"
+
+RULE [Pizza]
+If [Plato Principal] = "Almidón" and
+[Ingrediente Almidón] = "Pizza"
+Then [Tipo Vino] = "Pizza"
+
+
+REM Dulces
+
+RULE [Frutas o bayas]
+If [Plato Principal] = "Dulces" and
+[Ingrediente Dulces] = "Frutas o bayas"
+Then [Tipo Vino] = "Dulce"
+
+RULE [Vainilla o caramelo]
+If [Plato Principal] = "Dulces" and
+[Ingrediente Dulces] = "Vainilla o caramelo"
+Then [Tipo Vino] = "Postre"
+
+RULE [Chocolate o café]
+If [Plato Principal] = "Dulces" and
+[Ingrediente Dulces] = "Chocolate o café"
+Then [Tipo Vino] = "Postre"
+
+
+REM Precio
+
+RULE [Precio Caro]
+If [Ámbito Social] : "Primera cita" "Cena íntima"
+Then [Precio Vino] = "Caro"
+
+RULE [Precio Mediano]
+If [Ámbito Social] : "Reunión familiar" "Reunión con amigos"
+Then [Precio Vino] = "Mediano"
+
+RULE [Precio Barato]
+If [Ámbito Social] : "Comida diaria" "Fiesta multitudinaria"
+Then [Precio Vino] = "Barato"
+
+
+REM Vino Rojo Intenso
+
+RULE [Vino Rojo Intenso Caro]
+If [Tipo Vino] = "Rojo Intenso" and
+[Precio Vino] = "Caro"
+Then [Vino] = "Monteagrelo Malbec"
+
+RULE [Vino Rojo Intenso Mediano]
+If [Tipo Vino] = "Rojo Intenso" and
+[Precio Vino] = "Mediano"
+Then [Vino] = "Pyros Barrel Selected Shiraz"
+
+RULE [Vino Rojo Intenso Barato]
+If [Tipo Vino] = "Rojo Intenso" and
+[Precio Vino] = "Barato"
+Then [Vino] = "Trapiche Origen Malbec"
+
+
+REM Vino Rojo Medio
+
+RULE [Vino Rojo Medio Caro]
+If [Tipo Vino] = "Rojo Medio" and
+[Precio Vino] = "Caro"
+Then [Vino] = "RdG Gran Reserva Tempranillo"
+
+RULE [Vino Rojo Medio Mediano]
+If [Tipo Vino] = "Rojo Medio" and
+[Precio Vino] = "Mediano"
+Then [Vino] = "Fabre Montmayou Reserva Cabernet Franc"
+
+RULE [Vino Rojo Medio Barato]
+If [Tipo Vino] = "Rojo Medio" and
+[Precio Vino] = "Barato"
+Then [Vino] = "Flichman Roble Merlot"
+
+
+REM Vino Rojo Claro
+
+RULE [Vino Rojo Claro Caro]
+If [Tipo Vino] = "Rojo Claro" and
+[Precio Vino] = "Caro"
+Then [Vino] = "Luigi Bosca Grand Pinot Noir"
+
+RULE [Vino Rojo Claro Mediano]
+If [Tipo Vino] = "Rojo Claro" and
+[Precio Vino] = "Mediano"
+Then [Vino] = "Humberto Canale Pinot Noir Estate"
+
+RULE [Vino Rojo Claro Barato]
+If [Tipo Vino] = "Rojo Claro" and
+[Precio Vino] = "Barato"
+Then [Vino] = "Alaris Pinot Noir"
+
+
+REM Vino Rosa
+
+RULE [Vino Rosa Caro]
+If [Tipo Vino] = "Rosa" and
+[Precio Vino] = "Caro"
+Then [Vino] = "Deseado Familia Schroeder Rose"
+
+RULE [Vino Rosa Mediano]
+If [Tipo Vino] = "Rosa" and
+[Precio Vino] = "Mediano"
+Then [Vino] = "Alamos Selección Viñedos Rose"
+
+RULE [Vino Rosa Barato]
+If [Tipo Vino] = "Rosa" and
+[Precio Vino] = "Barato"
+Then [Vino] = "Postales del Fin del Mundo Chardonnay"
+
+
+REM Vino Blanco Fuerte
+
+RULE [Vino Blanco Fuerte Caro]
+If [Tipo Vino] = "Blanco Fuerte" and
+[Precio Vino] = "Caro"
+Then [Vino] = "Angelica Chardonnay"
+
+RULE [Vino Blanco Fuerte Mediano]
+If [Tipo Vino] = "Blanco Fuerte" and
+[Precio Vino] = "Mediano"
+Then [Vino] = "Mumm Brut Rose"
+
+RULE [Vino Blanco Fuerte Barato]
+If [Tipo Vino] = "Blanco Fuerte" and
+[Precio Vino] = "Barato"
+Then [Vino] = "Bestué Chardonnay"
+
+
+REM Vino Blanco Suave
+
+RULE [Vino Blanco Suave Caro]
+If [Tipo Vino] = "Blanco Suave" and
+[Precio Vino] = "Caro"
+Then [Vino] = "Salentein Reserve Sauvignon Blanc"
+
+RULE [Vino Blanco Suave Mediano]
+If [Tipo Vino] = "Blanco Suave" and
+[Precio Vino] = "Mediano"
+Then [Vino] = "Las Perdices Albariño"
+
+RULE [Vino Blanco Suave Barato]
+If [Tipo Vino] = "Blanco Suave" and
+[Precio Vino] = "Barato"
+Then [Vino] = "Santa Julia Chenin Dulce"
+
+
+REM Vino Espumante
+
+RULE [Vino Espumante Caro]
+If [Tipo Vino] = "Espumante" and
+[Precio Vino] = "Caro"
+Then [Vino] = "Cruzat Cuvee Rose"
+
+RULE [Vino Espumante Mediano]
+If [Tipo Vino] = "Espumante" and
+[Precio Vino] = "Mediano"
+Then [Vino] = "Mumm Domaine Brut Nature"
+
+RULE [Vino Espumante Barato]
+If [Tipo Vino] = "Espumante" and
+[Precio Vino] = "Barato"
+Then [Vino] = "Emilia Extra Brut"
+
+
+REM Vino Dulce
+
+RULE [Vino Dulce Caro]
+If [Tipo Vino] = "Dulce" and
+[Precio Vino] = "Caro"
+Then [Vino] = "Luigi Bosca Gala 3"
+
+RULE [Vino Dulce Mediano]
+If [Tipo Vino] = "Dulce" and
+[Precio Vino] = "Mediano"
+Then [Vino] = "Los Arboles Dulce"
+
+RULE [Vino Dulce Barato]
+If [Tipo Vino] = "Dulce" and
+[Precio Vino] = "Barato"
+Then [Vino] = "Callia Dulce"
+
+
+REM Vino Postre
+
+RULE [Vino Postre Caro]
+If [Tipo Vino] = "Postre" and
+[Precio Vino] = "Caro"
+Then [Vino] = "Amarula"
+
+RULE [Vino Postre Mediano]
+If [Tipo Vino] = "Postre" and
+[Precio Vino] = "Mediano"
+Then [Vino] = "Baileys Original"
+
+RULE [Vino Postre Barato]
+If [Tipo Vino] = "Postre" and
+[Precio Vino] = "Barato"
+Then [Vino] = "Bols Ginebra"
+
+
+REM Pizza con Champagne
+
+RULE [Pizza con Champagne]
+If [Tipo Vino] = "Pizza"
+Then [Vino] = "Pizza con Champagne"
+
+
+
+GOAL [Vino]
+
+
+PROMPT [Ámbito Social] MultChoice
+"En qué ámbito social se va a consumir el vino?"
+"Primera cita"
+"Cena íntima"
+"Comida diaria"
+"Reunión familiar"
+"Reunión con amigos"
+"Fiesta multitudinaria"
+
+PROMPT [Plato Principal] MultChoice
+"Cuál es el plato principal del evento?"
+"Carnes"
+"Lácteos"
+"Vegetales"
+"Hierbas o especias"
+"Almidón"
+"Dulces"
+"Otros"
+
+PROMPT [Ingrediente Carnes] MultChoice
+"Cuál es el ingrediente principal de la comida?"
+"Carnes rojas"
+"Carnes curadas"
+"Cerdos"
+"Aves"
+"Moluscos"
+"Peces"
+"Langostas o mariscos"
+
+PROMPT [Ingrediente Lácteos] MultChoice
+"Cuál es el ingrediente principal de la comida?"
+"Quesos blandos o cremas"
+"Quesos fuertes"
+"Quesos duros"
+
+PROMPT [Ingrediente Vegetales] MultChoice
+"Cuál es el ingrediente principal de la comida?"
+"Cebollas o ajos"
+"Vegetales verdes"
+"Raices o calabazas"
+"Tomates u otras frutas"
+"Hongos"
+"Nueces o semillas"
+"Frijoles o arvejas"
+
+PROMPT [Ingrediente Hierbas] MultChoice
+"Cuál es el ingrediente principal de la comida?"
+"Pimienta negra"
+"Pimientos o ajís"
+"Especias picantes"
+"Hierbas verdes"
+"Especias dulces"
+"Especias aromáticas o exóticas"
+
+PROMPT [Ingrediente Almidón] MultChoice
+"Cuál es el ingrediente principal de la comida?"
+"Almidón blanco"
+"Granos integrales"
+"Batatas o tubérculos"
+"Papas"
+"Pizza"
+
+PROMPT [Ingrediente Dulces] MultChoice
+"Cuál es el ingrediente principal de la comida?"
+"Frutas o bayas"
+"Vainilla o caramelo"
+"Chocolate o café"
+
+PROMPT [Ingrediente Otros] MultChoice
+"Cuál es la forma de preparación del plato principal?"
+"Plancha o parrilla"
+"Salteado o frito"
+"Ahumado"
+"Horno"
+"Hervido"
+
+PROMPT [Preferencia Vino] MultChoice
+"Qué tipo de vino prefiere?"
+"Vino tinto"
+"Vino blanco"
+"Espumante"
+"Dulce"

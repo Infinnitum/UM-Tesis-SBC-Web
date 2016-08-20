@@ -1,0 +1,12 @@
+<atributo>
+    <nombre>Humedad Relativa</nombre>
+    <valor>100</valor>
+</atributo>
+<atributo>
+    <nombre>Temperatura</nombre>
+    <url>http://infinnitum.dyndns.pro:88/tesis/data/temperatura.html</url>
+</atributo>
+<atributo>
+    <nombre>Velocidad Viento</nombre>
+    <valor>40</valor>
+</atributo>

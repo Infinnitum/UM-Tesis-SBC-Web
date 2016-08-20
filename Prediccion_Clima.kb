@@ -1,0 +1,316 @@
+REM Predicción Clima
+
+REM Fenómeno
+
+RULE [Lluvia]
+If [Humedad Relativa] = 100 and
+[Temperatura] >= 15
+Then [Fenómeno] = "Lluvia"
+
+RULE [Granizo]
+If [Humedad Relativa] = 100 and
+[Temperatura] < 15 and
+[Temperatura] >= 0
+Then [Fenómeno] = "Granizo"
+
+RULE [Nieve]
+If [Humedad Relativa] = 100 and
+[Temperatura] < 0
+Then [Fenómeno] = "Nieve"
+
+RULE [Día]
+If [Humedad Relativa] < 100
+Then [Fenómeno] = "Día"
+
+
+REM Viento
+
+RULE [Sin viento]
+If [Velocidad Viento] < 6
+Then [Denominación] = "Sin viento"
+
+RULE [Suave]
+If [Velocidad Viento] >= 6 and
+[Velocidad Viento] < 12
+Then [Denominación] = "Suave"
+
+RULE [Leve]
+If [Velocidad Viento] >= 12 and
+[Velocidad Viento] < 20
+Then [Denominación] = "Leve"
+
+RULE [Moderado]
+If [Velocidad Viento] >= 20 and
+[Velocidad Viento] < 29
+Then [Denominación] = "Moderado"
+
+RULE [Intensa]
+If [Velocidad Viento] >= 29 and
+[Velocidad Viento] < 39
+Then [Denominación] = "Intensa"
+
+RULE [Fuerte]
+If [Velocidad Viento] >= 39 and
+[Velocidad Viento] < 50
+Then [Denominación] = "Fuerte"
+
+RULE [Muy fuerte]
+If [Velocidad Viento] >= 50 and
+[Velocidad Viento] < 62
+Then [Denominación] = "Muy fuerte"
+
+RULE [Temporal]
+If [Velocidad Viento] >= 62 and
+[Velocidad Viento] < 73
+Then [Denominación] = "Temporal"
+
+RULE [Temporal muy fuerte]
+If [Velocidad Viento] >= 73
+Then [Denominación] = "Temporal muy fuerte"
+
+
+REM Temperatura
+
+RULE [Muy Frío]
+If [Temperatura] < 4
+Then [Clasificación] = "Muy frío"
+
+RULE [Frío]
+If [Temperatura] >= 4 and
+[Temperatura] < 10
+Then [Clasificación] = "Frío"
+
+RULE [Fresco]
+If [Temperatura] >= 10 and
+[Temperatura] < 14
+Then [Clasificación] = "Fresco"
+
+RULE [Templado]
+If [Temperatura] >= 14 and
+[Temperatura] < 20
+Then [Clasificación] = "Templado"
+
+RULE [Agradable]
+If [Temperatura] >= 20 and
+[Temperatura] < 28
+Then [Clasificación] = "Agradable"
+
+RULE [Cálido]
+If [Temperatura] >= 28 and
+[Temperatura] < 31
+Then [Clasificación] = "Cálido"
+
+RULE [Caluroso]
+If [Temperatura] >= 31 and
+[Temperatura] < 35
+Then [Clasificación] = "Caluroso"
+
+RULE [Muy caluroso]
+If [Temperatura] >= 35 and
+[Temperatura] < 40
+Then [Clasificación] = "Muy caluroso"
+
+RULE [Sofocante]
+If [Temperatura] >= 40
+Then [Clasificación] = "Sofocante"
+
+
+REM Pronóstico
+
+RULE [Lluvia Sin viento]
+If [Fenómeno] = "Lluvia" and
+[Denominación] = "Sin viento"
+Then [Pronóstico] = "Lluvia sin viento"
+
+RULE [Lluvia Suave]
+If [Fenómeno] = "Lluvia" and
+[Denominación] = "Suave"
+Then [Pronóstico] = "Lluvia suave"
+
+RULE [Lluvia Leve]
+If [Fenómeno] = "Lluvia" and
+[Denominación] = "Leve"
+Then [Pronóstico] = "Lluvia leve"
+
+RULE [Lluvia Moderado]
+If [Fenómeno] = "Lluvia" and
+[Denominación] = "Moderado"
+Then [Pronóstico] = "Lluvia moderada"
+
+RULE [Lluvia Intensa]
+If [Fenómeno] = "Lluvia" and
+[Denominación] = "Intensa"
+Then [Pronóstico] = "Lluvia intensa"
+
+RULE [Lluvia Fuerte]
+If [Fenómeno] = "Lluvia" and
+[Denominación] = "Fuerte"
+Then [Pronóstico] = "Lluvia fuerte"
+
+RULE [Lluvia Muy fuerte]
+If [Fenómeno] = "Lluvia" and
+[Denominación] = "Muy fuerte"
+Then [Pronóstico] = "Lluvia muy fuerte"
+
+RULE [Lluvia Temporal]
+If [Fenómeno] = "Lluvia" and
+[Denominación] = "Temporal"
+Then [Pronóstico] = "Temporal con lluvia"
+
+RULE [Lluvia Temporal muy fuerte]
+If [Fenómeno] = "Lluvia" and
+[Denominación] = "Temporal muy fuerte"
+Then [Pronóstico] = "Temporal muy fuerte con lluvia"
+
+
+RULE [Granizo Sin viento]
+If [Fenómeno] = "Granizo" and
+[Denominación] = "Sin viento"
+Then [Pronóstico] = "Granizo sin viento"
+
+RULE [Granizo Suave]
+If [Fenómeno] = "Granizo" and
+[Denominación] = "Suave"
+Then [Pronóstico] = "Granizo suave"
+
+RULE [Granizo Leve]
+If [Fenómeno] = "Granizo" and
+[Denominación] = "Leve"
+Then [Pronóstico] = "Granizo leve"
+
+RULE [Granizo Moderado]
+If [Fenómeno] = "Granizo" and
+[Denominación] = "Moderado"
+Then [Pronóstico] = "Granizo moderado"
+
+RULE [Granizo Intensa]
+If [Fenómeno] = "Granizo" and
+[Denominación] = "Intensa"
+Then [Pronóstico] = "Granizo intenso"
+
+RULE [Granizo Fuerte]
+If [Fenómeno] = "Granizo" and
+[Denominación] = "Fuerte"
+Then [Pronóstico] = "Granizo fuerte"
+
+RULE [Granizo Muy fuerte]
+If [Fenómeno] = "Granizo" and
+[Denominación] = "Muy fuerte"
+Then [Pronóstico] = "Granizo muy fuerte"
+
+RULE [Granizo Temporal]
+If [Fenómeno] = "Granizo" and
+[Denominación] = "Temporal"
+Then [Pronóstico] = "Temporal con granizo"
+
+RULE [Granizo Temporal muy fuerte]
+If [Fenómeno] = "Granizo" and
+[Denominación] = "Temporal muy fuerte"
+Then [Pronóstico] = "Temporal muy fuerte con granizo"
+
+
+RULE [Nieve Sin viento]
+If [Fenómeno] = "Nieve" and
+[Denominación] = "Sin viento"
+Then [Pronóstico] = "Nieve sin viento"
+
+RULE [Nieve Suave]
+If [Fenómeno] = "Nieve" and
+[Denominación] = "Suave"
+Then [Pronóstico] = "Nieve suave"
+
+RULE [Nieve Leve]
+If [Fenómeno] = "Nieve" and
+[Denominación] = "Leve"
+Then [Pronóstico] = "Nieve leve"
+
+RULE [Nieve Moderado]
+If [Fenómeno] = "Nieve" and
+[Denominación] = "Moderado"
+Then [Pronóstico] = "Nieve moderado"
+
+RULE [Nieve Intensa]
+If [Fenómeno] = "Nieve" and
+[Denominación] = "Intensa"
+Then [Pronóstico] = "Nieve intenso"
+
+RULE [Nieve Fuerte]
+If [Fenómeno] = "Nieve" and
+[Denominación] = "Fuerte"
+Then [Pronóstico] = "Nieve fuerte"
+
+RULE [Nieve Muy fuerte]
+If [Fenómeno] = "Nieve" and
+[Denominación] = "Muy fuerte"
+Then [Pronóstico] = "Nieve muy fuerte"
+
+RULE [Nieve Temporal]
+If [Fenómeno] = "Nieve" and
+[Denominación] = "Temporal"
+Then [Pronóstico] = "Temporal con nieve"
+
+RULE [Nieve Temporal muy fuerte]
+If [Fenómeno] = "Nieve" and
+[Denominación] = "Temporal muy fuerte"
+Then [Pronóstico] = "Temporal muy fuerte con nieve"
+
+
+RULE [Día Muy Frío]
+If [Fenómeno] = "Día" and
+[Clasificación] = "Muy frío"
+Then [Pronóstico] = "Día muy frío"
+
+RULE [Día Frío]
+If [Fenómeno] = "Día" and
+[Clasificación] = "Frío"
+Then [Pronóstico] = "Día frío"
+
+RULE [Día Fresco]
+If [Fenómeno] = "Día" and
+[Clasificación] = "Fresco"
+Then [Pronóstico] = "Día fresco"
+
+RULE [Día Templado]
+If [Fenómeno] = "Día" and
+[Clasificación] = "Templado"
+Then [Pronóstico] = "Día templado"
+
+RULE [Día Agradable]
+If [Fenómeno] = "Día" and
+[Clasificación] = "Agradable"
+Then [Pronóstico] = "Día agradable"
+
+RULE [Día Cálido]
+If [Fenómeno] = "Día" and
+[Clasificación] = "Cálido"
+Then [Pronóstico] = "Día cálido"
+
+RULE [Día Caluroso]
+If [Fenómeno] = "Día" and
+[Clasificación] = "Caluroso"
+Then [Pronóstico] = "Día caluroso"
+
+RULE [Día Muy Caluroso]
+If [Fenómeno] = "Día" and
+[Clasificación] = "Muy caluroso"
+Then [Pronóstico] = "Día muy caluroso"
+
+RULE [Día Sofocante]
+If [Fenómeno] = "Día" and
+[Clasificación] = "Sofocante"
+Then [Pronóstico] = "Día sofocante"
+
+
+GOAL [Pronóstico]
+
+
+PROMPT [Temperatura] Numeric
+"Cuál es la temperatura actual en °C?"
+
+PROMPT [Humedad Relativa] Numeric
+"Cuál es la humedad relativa actual?"
+"0"
+"100"
+
+PROMPT [Velocidad Viento] Numeric
+"Cuál es la velocidad del viento?"
